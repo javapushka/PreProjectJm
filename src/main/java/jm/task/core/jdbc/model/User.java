@@ -1,22 +1,26 @@
 package jm.task.core.jdbc.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+@Entity
+@Table(name = "users")
 public class User {
-    @Id
-    private Long id;
 
-    @Column
+    @Id
+    @Column(name = "id") //по видео добавил эту аннотацию
+    private long id;
+
+    @Column(name = "name")
     private String name;
 
-    @Column
+    @Column(name = "lastName")
     private String lastName;
 
-    @Column
-    private Byte age;
+    @Column(name = "age")
+    private byte age;
 
     public User() {
 
